@@ -14,9 +14,9 @@
     .hero {
       background-image: url('pyleaMUNfinallogo.png');
       background-repeat: no-repeat;
-      background-size: auto 90%; /* 50% larger than 60% -> 90% */
+      background-size: auto 60%; /* Reverted to previous */
       background-position: center center;
-      height: 75vh; /* 50% larger than 50vh -> 75vh */
+      height: 50vh; /* Reverted to previous */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -33,7 +33,7 @@
     .btn-group-toggle .btn { cursor: pointer; }
     .btn-available.active { background-color: #198754; color: #fff; border-color: #198754; }
     .btn-unavailable.active { background-color: #dc3545; color: #fff; border-color: #dc3545; }
-    .container { margin-top: 0; /* remove extra spacing */ }
+    .container { margin-top: 0; } /* Content at end of hero */
   </style>
 </head>
 <body>
@@ -110,7 +110,6 @@
           availActive = saved === 'available' ? 'active' : '';
           unavailActive = saved === 'unavailable' ? 'active' : '';
         } else {
-          // default: all available except Spain & Iran
           if (country === 'Spain' || country === 'Iran') {
             unavailActive = 'active';
             localStorage.setItem(country, 'unavailable');
