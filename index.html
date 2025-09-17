@@ -63,8 +63,8 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // --- MODIFIED LINE: Version number increased to 13 to force a refresh ---
-    const SCRIPT_VERSION = 13;
+    // --- MODIFIED LINE: Version number increased to 14 to force a refresh ---
+    const SCRIPT_VERSION = 14;
 
     const listContainer = document.getElementById('country-list');
     const countries = [
@@ -99,14 +99,14 @@
           availActive = saved === 'available' ? 'active' : '';
           unavailActive = saved === 'unavailable' ? 'active' : '';
         } else {
-          // --- MODIFIED LINE: Added Norway to the list of unavailable countries ---
+          // --- MODIFIED LINE: Added Japan, Malta, and Hungary to the list of unavailable countries ---
           if ([ 
             'Spain', 'Iran', 'Greece', 'Denmark', 'France', 'Saudi Arabia', 
             'United Kingdom', 'Australia', 'Germany', 'Sweden', 'Netherlands', 
             'Italy', 'Finland', 'Portugal', 'North Korea', 'South Korea',
             'Switzerland','Czech Republic','Austria','Ireland','Iceland',
             'Cyprus','Serbia','India','Turkey','United States','Belgium',
-            'Canada','Luxembourg','Norway','Venezuela'
+            'Canada','Luxembourg','Norway','Venezuela', 'Japan', 'Malta', 'Hungary'
           ].includes(country)) {
             unavailActive = 'active';
             localStorage.setItem(country, 'unavailable');
