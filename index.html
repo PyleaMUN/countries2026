@@ -108,7 +108,7 @@
             'Cyprus','Serbia','India','Turkey','United States','Belgium',
             'Canada','Luxembourg','Norway','Venezuela', 'Japan', 'Malta', 'Hungary',
             'Albania', 'Egypt', 'Qatar', 'Mexico', 'Brazil', 'Poland', 'China','New Zealand',
-            'Argentina', 'Russia', 'Belarus', 'Estonia','Nigeria','South Africa'
+            'Argentina', 'Russia', 'Belarus', 'Estonia','Nigeria','South Africa',
             // Newly added
             'Ukraine', 'Armenia', 'United Arab Emirates', 'Philippines'
           ].includes(country)) {
@@ -123,7 +123,7 @@
         row.className = 'country-row list-group-item';
         row.innerHTML = `
           <span class="country-name">${country}</span>
-          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <div class="btn-group" role="group">
             <button type="button" class="btn btn-outline-success btn-available ${availActive}">Available</button>
             <button type="button" class="btn btn-outline-danger btn-unavailable ${unavailActive}">Unavailable</button>
           </div>
